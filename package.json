@@ -1,0 +1,32 @@
+{
+    "name": "Multi",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp start",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^9.7.6",
+        "browser-sync": "^2.26.7",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-postcss": "^8.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "node-sass": "^4.13.1"
+    },
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.5.0",
+        "popper.js": "^1.16.0"
+    },
+    "browserslist": [
+        "defaults"
+    ]
+}

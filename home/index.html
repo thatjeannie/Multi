@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Multihearse Curse</title>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">The Multihearse Curse</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="themes/elloasty/index.html">Ello Asty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Something Else</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            dirty flying car
+        </span>
+    </div>
+</nav>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        // Enable popovers
+        $('[data-toggle="popover"]').popover();
+        // Enable tooltips
+        $('[data-toggle="tooltip"]').tooltip();
+        // Enable toasts
+        $('.toast').toast('show');
+    });
+</script>
+</body>
+</html>
