@@ -42,39 +42,24 @@ npm install bootstrap popper.js@1.16.0 jquery
 ## Step 4: Build the following file structure
 
 ```TEXT
-project-root
+root/
     build/
         home/
             js/
             scss/
-                main.scss
-
         themes/
             themename/
-                themename.scss
-
     home/
         assets/
             css/
-                main.css
-                main.min.css
-
             images/
             js/
-
-        index.html
-
-    themes/
-        themename/
-            assets/
-                css/
-                    themename.css
-                    themename.min.css
-
-                images/
-                js/
-
-            index.html
+        themes/
+            themename/
+                assets/
+                    css/
+                    images/
+                    js/
 ```
 
 ## Step 5: Create the following files within the above file structure
@@ -83,7 +68,7 @@ project-root
 /build/home/scss/main.scss
 /build/themes/themename/themename.scss
 /home/index.html
-/themes/themename/index.html
+/home/themes/themename/index.html
 ```
 
 ## Step 6: Add the following to `gulpfile.js`
@@ -112,10 +97,10 @@ function syncBrowser(done) {
             './home/*.html',
             './home/assets/css/*.css',
             './home/assets/js/*.js',
-            './themes/themename/*.html',
-            './themes/themename/assets/css/*.css',
-            './themes/themename/assets/js/*.js',
-            './themes/themename/assets/images/*.*',
+            './home/themes/elloasty/*.html',
+            './home/themes/elloasty/assets/css/*.css',
+            './home/themes/elloasty/assets/js/*.js',
+            './home/themes/elloasty/assets/images/*.*',
         ],
         server: './home',
         port: 8080,
@@ -141,22 +126,22 @@ function compileSiteStyles() {
 
 // Function to compile the theme SCSS files
 function compileThemeStyles() {
-    return gulp.src('./build/themes/themename/*.scss')
+    return gulp.src('./build/themes/elloasty/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(postcss([ autoprefixer() ]))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./themes/themename/assets/css/'))
+        .pipe(gulp.dest('./home/themes/elloasty/assets/css/'))
         .pipe(cleanCss())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./themes/themename/assets/css'))
+        .pipe(gulp.dest('./home/themes/elloasty/assets/css'))
         .pipe(browserSync.stream())
 }
 
 // Function to watch files, and rebuild on changes
 function watchFiles() {
     gulp.watch('./build/home/scss/*.scss', compileSiteStyles);
-    gulp.watch('./build/themes/themename/*.scss', compileThemeStyles);
+    gulp.watch('./build/themes/elloasty/*.scss', compileThemeStyles);
 }
 
 // The single task function
@@ -188,13 +173,13 @@ The `browserslist` is used by `autoprefixer` to determine which CSS prefixes to 
 Home index.html
 
 ```HTML
-<link rel="stylesheet" href="./assets/css/main.min.css">
+<link rel="stylesheet" href="assets/css/main.min.css">
 ```
 
 Theme index.html
 
 ```HTML
-<link rel="stylesheet" href="./assets/css/themename.min.css">
+<link rel="stylesheet" href="assets/css/themename.min.css">
 ```
 
 ## Step 9: At project root, enter the following into command line
