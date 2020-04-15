@@ -168,7 +168,24 @@ The `browserslist` is used by `autoprefixer` to determine which CSS prefixes to 
 ]
 ```
 
-## Step 8: Link minified CSS files to `head` of each HTML file
+## Step 8: Add the Bootstrap core SCSS using `@import`
+
+Both SCSS files we created earlier must import Bootstrap - we'll get it from the `node_modules` directory thusly:
+
+```SCSS
+// Variable Overwrites First
+// You may (re)define any core Bootstrap variables here
+// Or import a separate file
+
+// Bootstrap Source
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+// Theme Customizations
+// You may create custom SCSS here
+// Or import a separate file
+```
+
+## Step 9: Link minified CSS files to `head` of each HTML file
 
 Home index.html
 
@@ -182,9 +199,9 @@ Theme index.html
 <link rel="stylesheet" href="assets/css/themename.min.css">
 ```
 
-## Step 9: At project root, enter the following into command line
+## Step 10: At project root, enter the following into command line
 
-Either will work - pick one.
+Either will work - npm infers the "run" part of `start` commands.
 
 ```TERMINAL
 npm run start
@@ -194,6 +211,6 @@ npm run start
 npm start
 ```
 
-## Step 10: Start building your theme
+## Step 11: Start building your theme
 
 Just update `gulpfile.js` with your new theme name when you want to build another one.
