@@ -185,7 +185,19 @@ Both SCSS files we created earlier must import Bootstrap - we'll get it from the
 // Or import a separate file
 ```
 
-## Step 9: Link minified CSS files to `head` of each HTML file
+## Step 9: At project root, enter the following into command line
+
+Either will work - npm infers the "run" part of `start` commands.
+
+```TERMINAL
+npm run start
+```
+
+```TERMINAL
+npm start
+```
+
+## Step 10: Link minified CSS files to `head` of each HTML file
 
 Home index.html
 
@@ -197,18 +209,6 @@ Theme index.html
 
 ```HTML
 <link rel="stylesheet" href="assets/css/themename.min.css">
-```
-
-## Step 10: At project root, enter the following into command line
-
-Either will work - npm infers the "run" part of `start` commands.
-
-```TERMINAL
-npm run start
-```
-
-```TERMINAL
-npm start
 ```
 
 ## Step 11: Start building your theme
