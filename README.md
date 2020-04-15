@@ -1,6 +1,6 @@
 # Local Bootstrap Theming in a Few Easy Steps (Multi)
 
-[https://github.com/JSDesign/Single](Local Bootstrap Single-Theme Development Here)
+[Local Bootstrap Single-Theme Development Here](https://github.com/JSDesign/Single)
 
 ## Step 1: Navigate to the project root, enter the following into command line
 
