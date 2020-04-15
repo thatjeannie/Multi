@@ -71,6 +71,7 @@ root/
 /build/themes/themename/themename.scss
 /home/index.html
 /home/themes/themename/index.html
+/gulpfile.js
 ```
 
 ## Step 6: Add the following to `gulpfile.js`
